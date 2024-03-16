@@ -30,7 +30,9 @@ onMounted(() => {
         headers: {
             Authentication: `OAuth ${access_token}`
         }
-    });
+    })
+    .then(r => r.json())
+    .then(console.log);
 })
 .catch((error: any) => console.log('Обработка ошибки', error))
 })
