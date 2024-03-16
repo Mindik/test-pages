@@ -3,7 +3,7 @@ import { onMounted } from 'vue';
 onMounted(() => {
 // @ts-ignore
 YaSendSuggestToken(
-  'https://mindik.github.io/test-pages/',
+  'https://mindik.github.io/test-pages/#/main',
    {
       flag: true
    }

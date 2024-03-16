@@ -8,11 +8,11 @@ onMounted(() => {
     if (!route.query.token) {
     // @ts-ignore
     YaAuthSuggest.init(
-{
-    client_id: 'abf332b273694f8e9889a9541db65bf3',
-    response_type: 'token',
-},
-'https://mindik.github.io/test-pages/',
+    {
+        client_id: 'abf332b273694f8e9889a9541db65bf3',
+        response_type: 'token',
+    },
+    'https://mindik.github.io/test-pages/#/test-login',
 
 )
 .then((handler: any) => handler())
@@ -20,8 +20,8 @@ onMounted(() => {
 .catch((error: any) => console.log('Обработка ошибки', error))
 } else {
     // @ts-ignore
-    windows.YaSendSuggestToken(
-   'https://mindik.github.io/test-pages/',
+    YaSendSuggestToken(
+   'https://mindik.github.io/test-pages/#/main',
    {
       flag: true
    }
