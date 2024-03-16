@@ -24,6 +24,7 @@ onMounted(() => {
     console.log('Сообщение с токеном', data)
     const {access_token} = data;
     fetch('https://login.yandex.ru/info', {
+        method: 'GET',
         headers: {
             Authentication: `OAuth ${access_token}`
         }
