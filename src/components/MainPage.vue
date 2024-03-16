@@ -5,9 +5,6 @@ import { useRoute } from 'vue-router';
 const route = useRoute();
 
 onMounted(() => {
-    debugger;
-    if (!route.query.token) {
-        
     // @ts-ignore
     YaAuthSuggest.init(
     {
@@ -26,17 +23,16 @@ onMounted(() => {
     }
 )
 .then(({handler}: any) => handler())
-.then((data: any) => console.log('Сообщение с токеном', data))
+.then((data: any) => {
+    console.log('Сообщение с токеном', data)
+    const {access_token} = data;
+    fetch('https://login.yandex.ru/info', {
+        headers: {
+            Authentication: `OAuth ${access_token}`
+        }
+    });
+})
 .catch((error: any) => console.log('Обработка ошибки', error))
-} else {
-    // @ts-ignore
-    YaSendSuggestToken(
-   'https://mindik.github.io/test-pages',
-   {
-      flag: true
-   }
-)
-}
 })
 
 
