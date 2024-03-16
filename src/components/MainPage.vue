@@ -21,7 +21,7 @@ onMounted(() => {
 } else {
     // @ts-ignore
     windows.YaSendSuggestToken(
-   'http://127.0.0.1:5173',
+   'https://mindik.github.io/test-pages/',
    {
       flag: true
    }
