@@ -5,6 +5,6 @@ export default defineConfig(async ({ mode }) => {
   console.log(mode);
   return {
     base: mode === 'development' ? '/' : '/test-pages/',
-  plugins: [vue()],
+    plugins: [vue()],
   }
 })
