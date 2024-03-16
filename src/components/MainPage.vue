@@ -11,9 +11,8 @@ onMounted(() => {
 {
     client_id: 'abf332b273694f8e9889a9541db65bf3',
     response_type: 'token',
-    redirect_uri: 'http://127.0.0.1:5173/test-login'
 },
-'http://127.0.0.1:5173',
+'https://mindik.github.io/test-pages/',
 
 )
 .then((handler: any) => handler())
