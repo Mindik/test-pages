@@ -5,14 +5,16 @@ import { useRoute } from 'vue-router';
 const route = useRoute();
 
 onMounted(() => {
+    debugger;
     if (!route.query.token) {
+        
     // @ts-ignore
     YaAuthSuggest.init(
     {
         client_id: 'abf332b273694f8e9889a9541db65bf3',
         response_type: 'token',
     },
-    'https://mindik.github.io/test-pages/#/test-login',
+    'https://mindik.github.io/test-pages',
     {
       view: "button",
       parentId: "buttonContainerId",
@@ -29,7 +31,7 @@ onMounted(() => {
 } else {
     // @ts-ignore
     YaSendSuggestToken(
-   'https://mindik.github.io/test-pages/#/main',
+   'https://mindik.github.io/test-pages',
    {
       flag: true
    }

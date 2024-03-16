@@ -4,7 +4,7 @@ console.log('test-login page')
 onMounted(() => {
 // @ts-ignore
 YaSendSuggestToken(
-  'https://mindik.github.io/test-pages/#/main',
+  'https://mindik.github.io/test-pages',
    {
       flag: true
    }
