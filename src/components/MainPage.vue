@@ -23,12 +23,7 @@ onMounted(() => {
 .then((data: any) => {
     console.log('Сообщение с токеном', data)
     const {access_token} = data;
-    fetch('https://login.yandex.ru/info', {
-        method: 'GET',
-        headers: {
-            Authentication: `OAuth ${access_token}`
-        }
-    })
+    fetch(`https://login.yandex.ru/info?oauth_token=${access_token}`)
     .then(r => r.json())
     .then(console.log);
 })
