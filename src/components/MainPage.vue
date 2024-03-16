@@ -23,7 +23,7 @@ onMounted(() => {
       buttonIcon: 'ya',
     }
 )
-.then((handler: any) => handler())
+.then(({handler}: any) => handler())
 .then((data: any) => console.log('Сообщение с токеном', data))
 .catch((error: any) => console.log('Обработка ошибки', error))
 } else {
