@@ -1,12 +1,13 @@
 <script setup lang="ts">
+import { onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
 
-console.log();
-if (!route.query.token) {
+onMounted(() => {
+    if (!route.query.token) {
     // @ts-ignore
-    window.YaAuthSuggest.init(
+    YaAuthSuggest.init(
 {
     client_id: 'abf332b273694f8e9889a9541db65bf3',
     response_type: 'token',
@@ -27,6 +28,8 @@ if (!route.query.token) {
    }
 )
 }
+})
+
 
 </script>
 
