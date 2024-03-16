@@ -13,7 +13,15 @@ onMounted(() => {
         response_type: 'token',
     },
     'https://mindik.github.io/test-pages/#/test-login',
-
+    {
+      view: "button",
+      parentId: "buttonContainerId",
+      buttonSize: 'm',
+      buttonView: 'main',
+      buttonTheme: 'light',
+      buttonBorderRadius: "0",
+      buttonIcon: 'ya',
+    }
 )
 .then((handler: any) => handler())
 .then((data: any) => console.log('Сообщение с токеном', data))
