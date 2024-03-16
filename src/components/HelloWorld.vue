@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
+console.log('test-login page')
 onMounted(() => {
 // @ts-ignore
 YaSendSuggestToken(
